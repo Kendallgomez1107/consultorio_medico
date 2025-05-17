@@ -6,6 +6,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('¡Servidor funcionando correctamente!');
+});
+
+
 // Rutas
 app.use('/api/patients', require('./routes/pacientes'));
 app.use('/api/doctors', require('./routes/medicos'));
