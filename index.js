@@ -12,10 +12,11 @@ app.get('/', (req, res) => {
 
 
 // Rutas
-app.use('/api/patients', require('./routes/pacientes'));
-app.use('/api/doctors', require('./routes/medicos'));
-app.use('/api/appointments', require('./routes/citas'));
-app.use('/api/consultations', require('./routes/consultas'));
+app.use('/api/patients', require('../backend/routes/pacientes'));
+app.use('/api/doctors', require('../backend/routes/medicos'));
+app.use('/api/appointments', require('../backend/routes/citas'));
+app.use('/api/consultations', require('../backend/routes/consultas'));
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
